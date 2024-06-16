@@ -1,5 +1,5 @@
 body {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: normal;
     font-size: 20px;
 }
@@ -10,6 +10,12 @@ a {
 
 adress {
     display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .header {
@@ -31,6 +37,7 @@ adress {
     display: flex;
     line-height: auto;
     gap: 0 32px;
+    list-style: circle;
 }
 
 .link {
@@ -39,7 +46,7 @@ adress {
     text-underline-offset: 5px;
 }
 
-.link__mainpage_nolist {
+.link_nodecor {
     list-style-type: none;
     text-decoration: none;
 }
@@ -50,12 +57,16 @@ adress {
 }
 
 .header__info {
-    display: flex;
-    flex-direction: column;
     max-width: 240px;
     line-height: 24.3px;
     align-self: center;
     justify-self: end;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    line-height: 24.3px;
 }
 
 .link__adress_nounderline {
@@ -84,7 +95,7 @@ adress {
     color: #ffffff;
 }
 
-.main__overlay {
+.overlay {
     position: absolute;
     background: rgb(0 0 0 / .6);
     inset: 0;
@@ -102,41 +113,32 @@ adress {
 }
 
 .main__title_text {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 100px;
     text-transform: uppercase;
     letter-spacing: 0.3em;
+    line-height: 100%;
 }
 
-.main__title_word-first {
+.main__title_word-top {
     line-height: 115%;
     align-self: flex-start;
 }
 
-.main__title_word-first span {
-    letter-spacing: 0.6em;
-}
-
-.main__title_word-second {
-    line-height: 100%;
+.main__title_word-middle {
     align-self: center;
 }
 
-.main__title_word-second span {
-    letter-spacing: 0.6em;
-}
-
-.main__title_word-third {
-    line-height: 100%;
+.main__title_word-bottom {
     align-self: flex-end;
 }
 
-.main__title_word-third span {
+.main__title_letter-spacing {
     letter-spacing: 0.6em;
 }
 
-.main__title_word-third span.main__no-spacing {
+.main__no-spacing {
     letter-spacing: 0em;
 }
 
@@ -144,7 +146,7 @@ adress {
     display: flex;
     justify-content: space-between;
     font-size: 22px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     align-items: center;
@@ -168,7 +170,7 @@ adress {
     background: transparent;
     color: #ffffff;
     font-size: 22px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     border: 0;
@@ -187,7 +189,7 @@ adress {
 
 .main__lots_title {
     font-size: 40px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: bold;
     line-height: auto;
     text-transform: uppercase;
@@ -204,28 +206,22 @@ adress {
 
 .card {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 50px 40px;
     width: 33.33333%;
-}
-
-.card__overlay {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0 0 0 / .6);
-    z-index: 0;
+    background-size: cover;
+    background-position: center;
 }
 
 .card__title_link {
-    z-index: 1;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card__title {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 22px;
     line-height: 120%;
@@ -233,10 +229,11 @@ adress {
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 3px;
+    z-index: 1;
 }
 
 .card__text {
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: 100;
     font-size: 20px;
     line-height: 120%;
@@ -246,24 +243,18 @@ adress {
 
 .card_bg-grass {
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .card_bg-redwall {
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .card__bg-chaos {
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
-.lots__link_more {
-    font-family: 'Raleway';
+.lots__link_margin {
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-size: 20px;
     line-height: auto;
     border-bottom: 0;
@@ -272,22 +263,22 @@ adress {
     margin-left: 40px;
 }
 
-.footer {
-    padding: 145px 0 90px 0;
+.about {
+    padding: 145px 0 0 0;
 }
 
-.footer_container {
+.about_container {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 180px 0;
 }
 
-.footer__container_about {
+.about__content {
     padding: 0 24px;
 }
 
-.footer__about {
+.content {
     padding: 35px 0 0 47px;
     display: grid;
     gap: 8px 72px;
@@ -297,7 +288,7 @@ adress {
     color: #000000;
 }
 
-.footer__about-image {
+.about__image {
     border-radius: 50%;
     width: 240px;
     height: 240px;
@@ -306,40 +297,40 @@ adress {
     align-content: center;
 }
 
-.footer__about-image img {
+.about__image img {
     margin: 65px auto;
 }
 
-.footer__about-title {
+.about__title {
     grid-column: 2/3;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: bold;
     font-size: 40px;
     line-height: auto;
     text-transform: uppercase;
 }
 
-.footer__about-text {
+.about__text {
     grid-column: 2/3;
     display: grid;
     gap: 24px 0;
-    font-family: 'Raleway';
+    font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
 }
 
-.footer__container_nav {
-    padding: 0 50px;
+.footer {
+    padding: 180px 50px 90px 50px;
     max-width: 100%;
 }
 
-.footer__nav {
+.footer__contact {
     display: flex;
     justify-content: space-between;
 }
 
-.footer__contact {
+.contact {
     display: flex;
     flex-direction: column;
     max-width: 240px;
@@ -360,15 +351,6 @@ adress {
     align-items: flex-start;
 }
 
-.footer__icons_yt {
+.footer__icon {
     width: 48px;
 }
-
-.footer__icons_vk {
-    width: 48px;
-}
-
-.footer__icons_pt {
-    width: 48px;
-}
-
