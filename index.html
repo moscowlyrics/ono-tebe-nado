@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../fonts/fonts.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/style.css">
   </head>
   <body>
     <header class="header">
@@ -19,7 +19,7 @@
             <li class="link link__auction"><a href="#">об аукционе</a></li>
           </ul>
         </nav>
-        <img class="header__logo" src="images/logo.png">
+        <img class="header__logo" src="../images/logo.png">
         <section class="header__info">
           <div class="header__contact">
             <span class="link link__phone-number"><a href="tel:+99995555555">+9 999 555 5555</a></span>
@@ -31,6 +31,7 @@
     </header>
     <main class="main">
       <section class="main__intro">
+        <div class="main__overlay"></div>
         <div class="main__title">
           <p class="main__title_text main__title_word-first">о<span>но</span></p>
           <p class="main__title_text main__title_word-second" >те<span>бе</span></p>
@@ -41,7 +42,7 @@
             Аукцион вещей, в которые никто не верил
           </span>
           <div class="main__title_bottom-button">
-            <p class="main__title_button-text"><a class="button__link" href="#">Сделать ставку</a></p>
+            <button class="main__title_button-text"><a class="button__link" href="#">Сделать ставку</a></button>
           </div>
         </div>
       </section>
@@ -49,18 +50,21 @@
         <div class="main__lots_container">
           <span class="main__lots_title">Лоты</span>
           <div class="card-container">
-            <div class="card card_bg-grass">
+            <article class="card card_bg-grass">
+              <div class="card__overlay"></div>
               <a class="card__title_link" href="#"><p class="card__title">Фильм режиссёра, который бросил киношколу</p></a>
               <p class="card__text">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
-            </div>
-            <div class="card card_bg-redwall">
+            </article>
+            <article class="card card_bg-redwall">
+              <div class="card__overlay"></div>
               <a class="card__title_link" href="#"><p class="card__title">Книга, где описан один скучный день из жизни рекламного агента</p></a>
               <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
-            </div>
-            <div class="card card__bg-chaos">
+            </article>
+            <article class="card card__bg-chaos">
+              <div class="card__overlay"></div>
               <a class="card__title_link" href="#"><p class="card__title">Картина, которую повторит даже 5-летний сын маминой подруги</p></a>
               <p class="card__text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
-            </div>
+            </article>
           </div>
           <span class="link lots__link_more"><a href="#">посмотреть больше</a></span>
         </div>
@@ -70,7 +74,9 @@
       <section class="footer_container">
         <div class="footer__container_about">
           <div class="footer__about">
-            <img class="footer__about-image" src="./images/logo-white.png">
+            <div class="footer__about-image">
+              <img src="../images/logo-white.svg">
+            </div>
             <p class="footer__about-title">Об аукционе</p>
             <div class="footer__about-text">
               <p class="footer__about-text_upper">Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть<br>ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?</p>
@@ -91,9 +97,9 @@
               <li class="link link__auction"><a href="#">об аукционе</a></li>
             </ul>
             <div class="footer__icons">
-              <a class="footer__icons_link" href="#"><img class="footer__icons_yt" src="/images/yt.svg"></a>
-              <a class="footer__icons_link" href="#"><img class="footer__icons_vk" src="/images/vk.svg"></a>
-              <a class="footer__icons_link" href="#"><img class="footer__icons_pt" src="/images/pinterest.svg"></a>
+              <a class="footer__icons_link" href="#"><img class="footer__icons_yt" src="../images/yt.svg"></a>
+              <a class="footer__icons_link" href="#"><img class="footer__icons_vk" src="../images/vk.svg"></a>
+              <a class="footer__icons_link" href="#"><img class="footer__icons_pt" src="../images/pinterest.svg"></a>
             </div>   
           </nav> 
         </div>     

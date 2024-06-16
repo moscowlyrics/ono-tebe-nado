@@ -63,22 +63,34 @@ adress {
 }
 
 .main {
+    position: relative;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .main__intro {
+    position: relative;
     padding: 165px 50px 50px 50px;
     width: 100%;
     border-bottom: 180px;
-    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/images/cover.jpg);
+    background-image: url(../images/cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    background-color: #000000;
     display: flex;
     flex-direction: column;
     gap: 135px 0;
     color: #ffffff;
+}
+
+.main__overlay {
+    position: absolute;
+    background: rgb(0 0 0 / .6);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .main__title {
@@ -86,6 +98,7 @@ adress {
     flex-direction: column;
     gap: 20px 0;
     width: 1000px;
+    z-index: 1;
 }
 
 .main__title_text {
@@ -136,6 +149,7 @@ adress {
     text-transform: uppercase;
     align-items: center;
     padding-left: 28px;
+    z-index: 1;
 }
 
 .main__title_bottom-text {
@@ -145,9 +159,19 @@ adress {
 
 .main__title_bottom-button {
     font-weight: normal;
-    line-height: auto;
+    padding: 12px 30px;
     border: 1px solid #ffffff;
-    padding: 12px 31px;
+}
+
+.main__title_button-text {
+    line-height: auto;
+    background: transparent;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 'Raleway';
+    font-weight: normal;
+    text-transform: uppercase;
+    border: 0;
 }
 
 .main__lots {
@@ -179,11 +203,25 @@ adress {
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 40px;
     width: 33.33333%;
+}
+
+.card__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / .6);
+    z-index: 0;
+}
+
+.card__title_link {
+    z-index: 1;
 }
 
 .card__title {
@@ -203,22 +241,23 @@ adress {
     font-size: 20px;
     line-height: 120%;
     color: #ffffff;
+    z-index: 1;
 }
 
 .card_bg-grass {
-    background-image:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/images/card-lot-01.jpg);
+    background-image: url(../images/card-lot-01.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .card_bg-redwall {
-    background-image:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/images/card-lot-02.jpg);
+    background-image: url(../images/card-lot-02.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .card__bg-chaos {
-    background-image:linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(/images/card-lot-03.jpg);
+    background-image: url(../images/card-lot-03.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -259,8 +298,16 @@ adress {
 }
 
 .footer__about-image {
+    border-radius: 50%;
     width: 240px;
-    height: 100%;
+    height: 240px;
+    background-color: black;
+    display: flex;
+    align-content: center;
+}
+
+.footer__about-image img {
+    margin: 65px auto;
 }
 
 .footer__about-title {
