@@ -14,6 +14,10 @@ ul {
     list-style: none;
 }
 
+address {
+    font-style: normal;
+}
+
 .header {
     width: 1052px;
     padding: 92px 26px 96px 26px;
