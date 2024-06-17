@@ -286,10 +286,11 @@ address {
     background-color: black;
     display: flex;
     align-content: center;
+    justify-content: center;
 }
 
 .about__image img {
-    margin: 65px auto;
+    width: 148px;
 }
 
 .about__title {
